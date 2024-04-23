@@ -7,7 +7,7 @@ public class Person {
 	private String address;
 
     private boolean isForeigner;
-	private boolean gender; //true = Laki-laki, false = Perempuan
+	private boolean isMAn; //true = Laki-laki, false = Perempuan
 
     private String spouseName;
 	private String spouseIdNumber;
@@ -56,8 +56,8 @@ public class Person {
         return isForeigner;
     }
 
-    public boolean getGender() {
-        return gender;
+    public boolean getIsMan() {
+        return isMan;
     }
     public List<String> getChildNames() {
         return childNames;
@@ -104,8 +104,8 @@ public class Person {
         this.isForeigner = isForeigner;
     }
 
-    public void setGender(boolean gender) {
-        this.gender = gender;
+    public void setIsMan(boolean isMan) {
+        this.isMan = isMan;
     }
 
 	public void setSpouse(String spouseName, String spouseIdNumber) {
