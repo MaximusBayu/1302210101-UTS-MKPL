@@ -27,10 +27,14 @@ public class TaxFunction {
 			numberOfChildren = 3;
 		}
 		
+		final int TAX_FREE_INCOME = 54000000;
+		final int ADDITIONAL_MARRIED_INCOME = 4500000;
+		final int ADDITIONAL_CHILD_INCOME = 1500000;
+
 		if (isMarried) {
-			tax = (int) Math.round(0.05 * (((monthlySalary + otherMonthlyIncome) * numberOfMonthWorking) - deductible - (54000000 + 4500000 + (numberOfChildren * 1500000))));
-		}else {
-			tax = (int) Math.round(0.05 * (((monthlySalary + otherMonthlyIncome) * numberOfMonthWorking) - deductible - 54000000));
+			tax = (int) Math.round(0.05 * (((monthlySalary + otherMonthlyIncome) * numberOfMonthWorking) - deductible - (TAX_FREE_INCOME + ADDITIONAL_MARRIED_INCOME + (numberOfChildren * ADDITIONAL_CHILD_INCOME))));
+		} else {
+			tax = (int) Math.round(0.05 * (((monthlySalary + otherMonthlyIncome) * numberOfMonthWorking) - deductible - TAX_FREE_INCOME));
 		}
 		
 		if (tax < 0) {
