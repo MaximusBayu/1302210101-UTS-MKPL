@@ -7,7 +7,7 @@ public class Person {
 	private String address;
 
     private boolean isForeigner;
-	private boolean isMAn; //true = Laki-laki, false = Perempuan
+	private boolean isMAn;
 
     private String spouseName;
 	private String spouseIdNumber;
@@ -15,11 +15,9 @@ public class Person {
 	private List<String> childNames;
 	private List<String> childIdNumbers;
 
-    // Constructor
     public EmployeeInfo() {
     }
 
-    // Getters
     public String getEmployeeId() {
         return employeeId;
     }
@@ -67,7 +65,6 @@ public class Person {
         return childIdNumbers;
     }
 
-    // Setters
     public void setEmployeeId(String employeeId) {
         this.employeeId = employeeId;
     }
